@@ -1,28 +1,30 @@
 import { Link } from 'react-router-dom'; // Use React Router's Link
 import { Button } from "@/components/ui/button";
-import { SearchBar } from '@/components/Searchbar';
+
+import Footer from '@/components/Footer';
 
 
 export default function Hero() {
   return (
   <>
-    <section className="py-20 px-6 text-center">
-      <h1 className="text-4xl sm:text-5xl font-Enterpriser mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-pink-600 mt-10">
-        Revolutionize Your Workflow
+    <section className="py-20 px-6 mb-20">
+      <h1 className="text-4xl sm:text-6xl font-OnlinePrivileges mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-lime-500 mt-10">
+        One for all
       </h1>
-      <p className=" font-OnlinePrivileges text-xl mb-4 max-w-2xl mx-auto text-muted-foreground">
-      Discover the power of tech with Sewantika. Transform your business through smart innovation.
+      <p className=" font-OnlinePrivileges text-2xl mb-16 max-w-2xl text-muted-foreground">
+      Discover the power of technology and manufacturing with Sewantika.
       </p>
-      <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-        <Button>
-          <Link to="/#contact">Get Started</Link>
+      <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-10">
+        <Button variant={"secondary"} size={'lg'} className='text-white'>
+          <Link to="/contact">Get Started</Link>
         </Button>
-        <Button variant="outline">
-          <Link to="/#features">Learn More</Link>
+        <Button variant="destructive" size={'lg'}>
+          <Link to="/features">Learn More</Link>
         </Button>
       </div>
     </section>
-    <SearchBar />
+  
+    <Footer/>
   </>
   );
 }

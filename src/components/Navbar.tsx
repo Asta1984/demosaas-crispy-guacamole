@@ -31,14 +31,19 @@ export default function Navbar() {
       isActive: location.pathname === "/features"
     },
     { 
+      to: "/about", 
+      label: "About",
+      isActive: location.pathname === "/about"
+    },
+    { 
       to: "/faq", 
       label: "FAQ",
       isActive: location.pathname === "/faq"
     },
     { 
-      to: "/contact", 
-      label: "Contact",
-      isActive: location.pathname === "/contact"
+      to: "/products", 
+      label: "Products",
+      isActive: location.pathname === "/products"
     }
   ];
 
@@ -112,7 +117,7 @@ export default function Navbar() {
 
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6 items-center">
+        <div className="hidden md:flex space-x-11 items-center">
           {navItems.map((item) => (
             <Link
               key={item.to}
@@ -127,8 +132,6 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-
-        {/* Desktop Wallet Connection */}
         <div className="hidden md:block ">
           <Button variant={"outline"}>Get Started</Button>
         </div>
@@ -174,6 +177,9 @@ export default function Navbar() {
                         {item.label}
                       </Link>
                     ))}
+                    <div className="mt-4 w-full">
+                      <Button variant={"outline"}>Get Started</Button>
+                    </div>
         
 
                   </motion.nav>

@@ -15,7 +15,7 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>
 
-export default function Contact() {
+export default function Products() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',

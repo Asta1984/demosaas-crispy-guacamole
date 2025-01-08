@@ -6,7 +6,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Home from '../pages/Home';
 import Features from '../pages/Features';
 import FAQ from '../pages/Faq';
-import Contact from '../pages/Contact';
+import  About from '../pages/About';
+import Products from '../pages/Products';
+import Contact from '../components/contact';
 
 // Page transition variants
 const pageVariants = {
@@ -81,6 +83,16 @@ const AppRoutes: React.FC = () => {
         <Route path="/faq" element={
           <Suspense fallback={<div>Loading...</div>}>
             <FAQ />
+          </Suspense>
+        } />
+        <Route path="/about" element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <About />
+          </Suspense>
+        } />
+        <Route path="/products" element={
+          <Suspense fallback={<div>Loading...</div>}>
+            <Products />
           </Suspense>
         } />
         <Route path="/contact" element={
