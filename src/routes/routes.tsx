@@ -8,7 +8,6 @@ import Features from '../pages/Features';
 import FAQ from '../pages/Faq';
 import  About from '../pages/About';
 import Products from '../pages/Products';
-import Contact from '../components/contact';
 
 // Page transition variants
 const pageVariants = {
@@ -93,11 +92,6 @@ const AppRoutes: React.FC = () => {
         <Route path="/products" element={
           <Suspense fallback={<div>Loading...</div>}>
             <Products />
-          </Suspense>
-        } />
-        <Route path="/contact" element={
-          <Suspense fallback={<div>Loading...</div>}>
-            <Contact />
           </Suspense>
         } />
         {/* 404 Route */}

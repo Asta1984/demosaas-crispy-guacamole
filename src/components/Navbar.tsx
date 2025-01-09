@@ -7,14 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 
 export default function Navbar() {
-  const [isSticky, setIsSticky] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 50);
+      setHasScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -93,10 +93,8 @@ export default function Navbar() {
       initial="initial"
       animate="animate"
       exit="exit"
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isSticky
-          ? 'bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm'
-          : 'bg-transparent'
+      className={`fixed w-full bg-black/80 backdrop-blur-sm z-50 transition-[border-color] duration-200 ${
+        hasScrolled ? 'border-b border-white/10' : 'border-b border-transparent'
       }`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">

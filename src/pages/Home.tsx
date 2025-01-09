@@ -1,30 +1,27 @@
-import { Link } from 'react-router-dom'; // Use React Router's Link
-import { Button } from "@/components/ui/button";
-
-import Footer from '@/components/Footer';
-
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
   <>
-    <section className="py-20 px-6 mb-20">
-      <h1 className="text-4xl sm:text-6xl font-OnlinePrivileges mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-lime-500 mt-10">
-        One for all
+    <section className="py-9 md:py-20 px-8 md:px-20 mb-16">
+      <h1 className="text-2xl sm:text-4xl font-OnlinePrivileges text-wrap max-w-md mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-lime-500 mt-10">
+      Launching your ideas has never been easier
       </h1>
-      <p className=" font-OnlinePrivileges text-2xl mb-16 max-w-2xl text-muted-foreground">
-      Discover the power of technology and manufacturing with Sewantika.
+      <p className="text-xl sm:text-2xl font-OnlinePrivileges mb-5 text-muted-foreground">
+      Build and Launch Your MVP in Record Time. 
+      </p>
+      <p className='text-xs text-wrap max-w-md font-Type_writer mb-12'>From web applications to embedded systems, we provide end-to-end development solutions to transform your ideas into production-ready products.
       </p>
       <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-10">
-        <Button variant={"secondary"} size={'lg'} className='text-white'>
-          <Link to="/contact">Get Started</Link>
-        </Button>
-        <Button variant="destructive" size={'lg'}>
-          <Link to="/features">Learn More</Link>
-        </Button>
-      </div>
+  <Link
+    to="/features"
+    className="text text-center sm:text-lg font-bold px-6 sm:px-8 py-3 border border-purple-500 rounded-full text-white hover:bg-slate-900 transition-colors transform hover:scale-105 duration-200 ease-in-out"
+  >
+    Explore
+  </Link>
+</div>
+
     </section>
-  
-    <Footer/>
   </>
   );
 }

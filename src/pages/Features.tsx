@@ -1,68 +1,93 @@
-'use client';
+import { motion } from 'framer-motion';
+import { Code2, Cpu, Layout, Terminal, Database, Cloud } from 'lucide-react';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardDescription } from "../components/ui/card";
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
 
-interface Feature {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-const features: Feature[] = [
-  {
-    title: 'Seamless Integration',
-    description: 'Easily connect with your favorite tools and platforms for a smooth workflow.',
-    icon: '🔗',
-  },
-  {
-    title: 'Advanced Analytics',
-    description: 'Gain valuable insights with our powerful analytics and reporting features.',
-    icon: '📊',
-  },
-  {
-    title: 'Collaboration Tools',
-    description: 'Work together in real-time with our suite of collaboration features.',
-    icon: '👥',
-  },
-  {
-    title: 'Automated Workflows',
-    description: 'Save time and reduce errors with our intelligent automation capabilities.',
-    icon: '⚙️',
-  },
-];
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 }
+};
 
 export default function Features() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
   return (
-    <section id="features" className="py-20 px-6" ref={ref}>
-      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Features</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        {features.map((feature, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.2,
-              type: 'spring',
-              stiffness: 100,
-            }}
-          >
-            <Card>
-              <CardHeader>
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <CardTitle>{feature.title}</CardTitle>
-                <CardDescription>{feature.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          </motion.div>
-        ))}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="min-h-screen bg-black pt-24"
+    >
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-4xl font-bold mb-4">Powerful Features</h1>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Everything you need to build and scale your next big idea
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <FeatureCard
+            icon={<Code2 className="w-6 h-6 text-blue-400" />}
+            title="MVP Development"
+            description="Launch your product quickly with our rapid MVP development process"
+          />
+          <FeatureCard
+            icon={<Layout className="w-6 h-6 text-purple-400" />}
+            title="Web Applications"
+            description="Build scalable web applications with modern technologies"
+          />
+          <FeatureCard
+            icon={<Cpu className="w-6 h-6 text-green-400" />}
+            title="PCB Design"
+            description="Professional PCB design and fabrication services"
+          />
+          <FeatureCard
+            icon={<Terminal className="w-6 h-6 text-yellow-400" />}
+            title="API Development"
+            description="Create robust APIs with comprehensive documentation"
+          />
+          <FeatureCard
+            icon={<Database className="w-6 h-6 text-red-400" />}
+            title="Database Design"
+            description="Scalable database architecture for your applications"
+          />
+          <FeatureCard
+            icon={<Cloud className="w-6 h-6 text-cyan-400" />}
+            title="Cloud Integration"
+            description="Seamless cloud deployment and infrastructure management"
+          />
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
+  );
+}
+
+function FeatureCard({ icon, title, description }) {
+  return (
+    <motion.div
+      variants={item}
+      className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition"
+    >
+      <div className="mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-gray-400 text-sm">{description}</p>
+    </motion.div>
   );
 }
