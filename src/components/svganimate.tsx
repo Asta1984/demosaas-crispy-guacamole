@@ -11,8 +11,8 @@ export default function GrowingSvg() {
     offset: ["start start", "end start"]
   })
 
-  const scale = useTransform(scrollYProgress, [0, 0.8], [1, 15])
-  const opacity = useTransform(scrollYProgress, [0.8, 1], [1, 0])
+  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 40])
+  const opacity = useTransform(scrollYProgress, [0.5, 1], [1, 0])
 
   return (
     <div ref={containerRef} className="h-[100vh]">
@@ -25,6 +25,7 @@ export default function GrowingSvg() {
           src="sewantika.svg" 
           alt="Dynamic SVG"
           className="mt-96 md:w-80 md:h-80"
+          layout
         />
       </div>
     </div>

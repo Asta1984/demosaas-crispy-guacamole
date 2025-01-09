@@ -1,8 +1,6 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  margin: 0 0;
 }
 
 .logo {
@@ -39,4 +37,23 @@
 
 .read-the-docs {
   color: #888;
+}
+body {
+  
+  background: radial-gradient(circle, #011616, #000000, #020a06);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite; 
+}
+
+/* Gradient animation */
+@keyframes gradientMove {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
