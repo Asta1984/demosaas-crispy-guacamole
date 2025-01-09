@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-10">
   <Link
     to="/features"
-    className="text text-center sm:text-lg font-bold px-6 sm:px-8 py-3 border border-purple-500 rounded-full text-white hover:bg-slate-900 transition-colors transform hover:scale-105 duration-200 ease-in-out"
+    className="text text-center sm:text-lg font-bold px-6 sm:px-8 py-3 border border-purple-500 rounded-full text-white hover:bg-gray-800 transition-colors transform hover:scale-105 duration-200 ease-in-out"
   >
     Explore
   </Link>
