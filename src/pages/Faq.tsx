@@ -2,7 +2,12 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
-const faqs = [
+type FAQ = {
+  question: string;
+  answer: string;
+};
+
+const faqs: FAQ[] = [
   {
     question: "What types of projects do you support?",
     answer: "We support a wide range of projects including web applications, mobile apps, IoT devices, and hardware prototypes. Our expertise spans across MVP development, PCB design, and full-stack development."
@@ -55,7 +60,12 @@ export default function FAQ() {
   );
 }
 
-function FAQItem({ faq, index }) {
+interface FAQItemProps {
+  faq: FAQ;
+  index: number;
+}
+
+function FAQItem({ faq, index }: FAQItemProps) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (

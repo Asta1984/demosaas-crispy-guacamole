@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Cpu, Layout, Terminal, Database, Cloud } from 'lucide-react';
 
@@ -6,14 +7,14 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 }
+  show: { opacity: 1, y: 0 },
 };
 
 export default function Features() {
@@ -79,7 +80,13 @@ export default function Features() {
   );
 }
 
-function FeatureCard({ icon, title, description }) {
+interface FeatureCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <motion.div
       variants={item}

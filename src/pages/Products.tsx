@@ -124,17 +124,26 @@ await project.deploy({
   );
 }
 
-function PricingTier({ title, price, features, highlighted = false }) {
+interface PricingTierProps {
+  title: string;
+  price: string;
+  features: string[];
+  highlighted?: boolean;
+}
+
+function PricingTier({ title, price, features, highlighted = false }: PricingTierProps) {
   return (
-    <div className={`p-6 rounded-xl ${
-      highlighted 
-        ? 'bg-blue-600 border-2 border-blue-400' 
-        : 'bg-white/5 border border-white/10'
-    }`}>
+    <div
+      className={`p-6 rounded-xl ${
+        highlighted
+          ? 'bg-blue-600 border-2 border-blue-400'
+          : 'bg-white/5 border border-white/10'
+      }`}
+    >
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <div className="text-3xl font-bold mb-6">{price}</div>
       <ul className="space-y-3 mb-6">
-        {features.map((feature, index) => (
+        {features.map((feature: string, index: number) => (
           <li key={index} className="flex items-center space-x-2">
             <span className="text-green-400">✓</span>
             <span className={highlighted ? 'text-white' : 'text-gray-400'}>
@@ -143,11 +152,13 @@ function PricingTier({ title, price, features, highlighted = false }) {
           </li>
         ))}
       </ul>
-      <button className={`w-full py-2 rounded-lg transition ${
-        highlighted
-          ? 'bg-white text-blue-600 hover:bg-gray-100'
-          : 'bg-blue-600 text-white hover:bg-blue-700'
-      }`}>
+      <button
+        className={`w-full py-2 rounded-lg transition ${
+          highlighted
+            ? 'bg-white text-blue-600 hover:bg-gray-100'
+            : 'bg-blue-600 text-white hover:bg-blue-700'
+        }`}
+      >
         Get Started
       </button>
     </div>
