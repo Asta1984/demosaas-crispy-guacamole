@@ -29,7 +29,8 @@ const pageVariants = {
 
 const pageTransition = {
   ease:"easeOut",
-  duration: 0.8
+  type:"spring",
+  duration: 0.9
 };
 
 const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) => {

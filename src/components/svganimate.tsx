@@ -1,4 +1,3 @@
-"use client"
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
@@ -17,11 +16,11 @@ export default function AnimateSvg() {
                 }}
                 animate={{
                     opacity: isInView ? 1 : 0,
-                    scale: isInView ? 4 : 1,
-                    rotate: 90
+                    scale: isInView ? 5 : 1,
+                    rotate: 270
                 }}
                 transition={{
-                    duration: 2,
+                    duration: 3,
                     ease: "easeOut"
                 }}
                 layout={true}
