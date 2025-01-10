@@ -13,25 +13,25 @@ import Products from '../pages/Products';
 const pageVariants = {
   initial: { 
     opacity: 0, 
-    x: "-100%",
+    y: "100%",
     scale: 0.95
   },
   in: { 
     opacity: 1, 
-    x: 0,
+    y: 0,
     scale: 1
   },
   out: { 
     opacity: 0, 
-    x: "100%",
+    y: "-100%",
     scale: 1.05
   }
 };
 
 const pageTransition = {
   type: "tween",
-  ease: "anticipate",
-  duration: 0.5
+  ease:"easeOut",
+  duration: 0.8
 };
 
 // Wrapper component for page transitions
