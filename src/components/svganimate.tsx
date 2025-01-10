@@ -1,34 +1,31 @@
 "use client"
-
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 
-export default function GrowingSvg() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  })
-
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 40])
-  const opacity = useTransform(scrollYProgress, [0.5, 1], [1, 0])
-
-  return (
-    <div ref={containerRef} className="h-[100vh]">
-      <div className="fixed inset-y-0 right-0 flex justify-end">
-        <motion.img
-          style={{
-            scale,
-            opacity,
-          }}
-          src="sewantika.svg" 
-          alt="Dynamic SVG"
-          className="mt-96 md:w-80 md:h-80"
-          layout
-        />
-      </div>
-    </div>
-  )
+export default function AnimateSvg() {
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: false, amount: 0.9 })
+    return (
+        <div ref={ref} className="h-screen flex items-center justify-center">
+            <motion.img
+                src="sewantika.svg"
+                alt="Sewantika"
+                className="w-24 h-24"
+                initial={{
+                    opacity: 0,
+                    scale: 0.1
+                }}
+                animate={{
+                    opacity: isInView ? 1 : 0,
+                    scale: isInView ? 4 : 1,
+                    rotate: 90
+                }}
+                transition={{
+                    duration: 2,
+                    ease: "easeOut"
+                }}
+                layout={true}
+            />
+        </div>
+    )
 }
-

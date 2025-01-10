@@ -1,4 +1,4 @@
-import GrowingSvg from '@/components/svganimate';
+import AnimateSvg from '@/components/svganimate';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -9,7 +9,7 @@ export default function Hero() {
           <h1 className="text-2xl sm:text-4xl font-OnlinePrivileges text-wrap max-w-md mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-lime-500 mt-10">
             Launching your ideas has never been easier
           </h1>
-          <p className="text-xl sm:text-2xl font-OnlinePrivileges mb-5 text-muted-foreground">
+          <p className="text-xl sm:text-2xl font-OnlinePrivileges mb-5 bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-cyan-400">
             Build and Launch Your MVP in Record Time. 
           </p>
           <p className='text-xs text-wrap max-w-md font-Type_writer mb-12'>
@@ -22,10 +22,10 @@ export default function Hero() {
             </Link>
           </div>
         </section>
-        <div className="relative md:absolute md:inset-y-0 md:right-0 md:w-1/2">
-          <GrowingSvg />
-        </div>
       </div>
+      <div className="relative md:absolute md:right-0 md:w-1/2">
+          <AnimateSvg />
+        </div>
     </div>
   );
 }
