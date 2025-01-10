@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
-// Import your page components
 import Home from '../pages/Home';
 import Features from '../pages/Features';
 import FAQ from '../pages/Faq';
@@ -29,12 +28,10 @@ const pageVariants = {
 };
 
 const pageTransition = {
-  type: "tween",
   ease:"easeOut",
   duration: 0.8
 };
 
-// Wrapper component for page transitions
 const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
 
@@ -62,7 +59,6 @@ const PageTransition: React.FC<{ children: React.ReactNode }> = ({ children }) =
   );
 };
 
-// Main Routes Component
 const AppRoutes: React.FC = () => {
   const location = useLocation();
 
