@@ -1,9 +1,9 @@
-import AnimateSvg from '@/components/new';
+import AnimateSvg from '@/components/svganimate';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-      <div className="grid grid-cols-1  gap-8">
+      <div className="grid grid-cols-1 gap-8 ">
         <section className="py-16 md:py-20 px-8 md:px-20 mb-16">
           <h1 className="text-2xl sm:text-4xl font-OnlinePrivileges text-wrap max-w-md mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-lime-500 mt-10">
             Launching your ideas has never been easier
@@ -20,7 +20,7 @@ export default function Hero() {
               Explore
             </Link>
           </div>
-          <div className="-z-50 relative md:absolute md:inset-y-0 md:right-0 md:w-1/2">
+          <div className="-z-50 relative md:absolute md:inset-y-0 md:right-0 md:w-1/2 overflow-hidden">
             <AnimateSvg />
           </div>
         </section>
