@@ -1,55 +1,40 @@
-import { motion, useInView, useAnimation, AnimatePresence } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function AnimateSvg() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: false, amount: 0.9 });
-    const controls = useAnimation();
-    
-    useEffect(() => {
-        if (isInView) {
-            const sequence = async () => {
-                await controls.start({
-                    opacity: 1,
-                    scale: 5,
-                    rotate: 360,
-                    transition: {
-                        duration: 2,
-                        type: "spring"
-                    }
-                });
-                
-                await controls.start({
-                    opacity: 0,
-                    scale: 12,
-                    transition: {
-                        duration: 0.8,
-                        ease: "easeOut"
-                    }
-                });
-            };
-            
-            sequence();
-        }
-    }, [isInView, controls]);
-    
-    return (
-        <div ref={ref} className="h-screen flex items-center justify-center relative">
-            <AnimatePresence mode="wait">
-                {(
-                    <motion.img
-                        key="logo"
-                        src="spinner.svg"
-                        alt="Sewantika"
-                        className="w-24 h-24"
-                        initial={{
-                            opacity: 0,
-                            scale: 0.1
-                        }}
-                        animate={controls}
-                    />
-                )}
-            </AnimatePresence>
-        </div>
-    );
+  const [showGif, setShowGif] = useState(false); // State to control GIF display
+
+  return (
+    <div className="h-screen flex items-center justify-center relative">
+      {!showGif && (
+        <motion.img
+          src="spinner.svg"
+          alt="Sewantika"
+          className="w-24 h-24"
+          initial={{ opacity: 0, scale: 0.1 }}
+          whileInView={{
+            opacity: 1,
+            scale: 5,
+            rotate: 360,
+          }}
+          transition={{
+            duration: 2,
+            type: "spring",
+          }}
+          onAnimationComplete={() => setShowGif(true)} // Show GIF after animation completes
+        />
+      )}
+
+      {showGif && (
+        <motion.img
+          src="floor2_2.gif"
+          alt="GIF"
+          className="w-72 h-72 relative items-center justify-center rounded-lg border"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+      )}
+    </div>
+  );
 }

@@ -1,5 +1,5 @@
 import InfiniteGrid from '@/components/Grid';
-import AnimateSvg from '@/components/svganimate';
+import AnimateSvg from '@/components/Svganimate';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
