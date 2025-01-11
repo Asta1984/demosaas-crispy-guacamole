@@ -39,7 +39,7 @@ export default function AnimateSvg() {
                 {(
                     <motion.img
                         key="logo"
-                        src="sewantika.svg"
+                        src="sewantika (3).svg"
                         alt="Sewantika"
                         className="w-24 h-24"
                         initial={{
