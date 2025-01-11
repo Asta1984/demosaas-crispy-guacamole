@@ -1,11 +1,11 @@
-import  { RetroGrid } from '@/components/ui/retro-grid';
+import InfiniteGrid from '@/components/Grid';
 import AnimateSvg from '@/components/svganimate';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
     <>
-     <div className="grid grid-cols-1 gap-8 ">
+     <div className="overflow-auto dark-scrollbar">
         <section className="py-16 md:py-20 px-8 md:px-20 mb-16">
           <h1 className="text-2xl sm:text-4xl font-OnlinePrivileges text-wrap max-w-md mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-700 to-lime-500 mt-10">
             Launching your ideas has never been easier
@@ -27,12 +27,7 @@ export default function Hero() {
           </div>
         </section>
       </div>
-      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border  md:shadow-xl">
-        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-7xl font-Enterpriser leading-none tracking-tighter text-transparent">
-          Retro Grid
-        </span>
-        <RetroGrid/>
-      </div>
+      <InfiniteGrid/>
     </>
   );
 }
