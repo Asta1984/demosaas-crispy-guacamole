@@ -1,3 +1,4 @@
+'use client';
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -6,7 +7,7 @@ export default function AnimateSvg() {
 
   return (
     <>
-    <div className="h-screen flex items-center justify-center relative">
+    <div className="md:h-screen flex items-center justify-center relative">
       {!showGif && (
         <motion.img
           src="spinner.svg"
@@ -16,7 +17,7 @@ export default function AnimateSvg() {
           whileInView={{
             opacity: 1,
             scale: 5,
-            rotate: 360,
+            rotate: 70,
           }}
           transition={{
             duration: 2,
@@ -30,10 +31,13 @@ export default function AnimateSvg() {
         <motion.img
           src="floor2_2.gif"
           alt="GIF"
-          className="w-72 h-72 relative items-center justify-center rounded-lg border"
+          className="w-36 md:w-72 md:h-72 relative items-center justify-center rounded-lg border"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ 
+            duration: 2,
+            type:"tween"
+          }}
         />
       )}
     </div>
