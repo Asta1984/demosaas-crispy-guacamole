@@ -7,7 +7,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -23,7 +23,7 @@ export default function Features() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-black pt-24"
+      className="absolute min-h-screen pt-24 inset-0"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -32,10 +32,11 @@ export default function Features() {
           transition={{ delay: 0.2 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Powerful Features</h1>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <h1 className="text-gray-400 max-w-2xl mx-auto font-OnlinePrivileges text-2xl md:text-4xl">
             Everything you need to build and scale your next big idea
-          </p>
+          </h1>
+          <p className='font-Enterpriser  md:text-2xl text-cyan-400 max-w-2xl mx-auto mt-5'>
+          Launch fast spend accordingly win big.</p>
         </motion.div>
 
         <motion.div
