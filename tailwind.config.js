@@ -70,9 +70,8 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-			'scrollbar': '#CBD5E1', 
-			'scrollbar-track': '#F1F5F9', 
-	  
+  			scrollbar: '#CBD5E1',
+  			'scrollbar-track': '#F1F5F9'
   		},
   		keyframes: {
   			'accordion-down': {
@@ -92,12 +91,6 @@ export default {
   				}
   			},
   			grid: {
-  				'0%': {
-  					transform: 'translateY(-50%)'
-  				},
-  				'100%': {
-  					transform: 'translateY(0)'
-  				},
   				'0%': {
   					transform: 'translateY(-50%)'
   				},
@@ -137,6 +130,11 @@ export default {
   				'100%': {
   					transform: 'translateY(-50%)'
   				}
+  			},
+  			'border-beam': {
+  				'100%': {
+  					'offset-distance': '100%'
+  				}
   			}
   		},
   		animation: {
@@ -147,7 +145,8 @@ export default {
   			third: 'moveInCircle 40s linear infinite',
   			fourth: 'moveHorizontal 40s ease infinite',
   			fifth: 'moveInCircle 20s ease infinite',
-  			grid: 'grid 15s linear infinite'
+  			grid: 'grid 15s linear infinite',
+  			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
   		}
   	}
   },

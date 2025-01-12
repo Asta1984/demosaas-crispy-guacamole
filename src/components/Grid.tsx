@@ -2,6 +2,7 @@
 
 import { RetroGrid } from "@/components/ui/retro-grid";
 import { motion } from "framer-motion";
+import { BorderBeam } from "./ui/border-beam";
 
 export default function InfiniteGrid() {
   return (
@@ -16,6 +17,7 @@ export default function InfiniteGrid() {
           >
             Step into future Unleash potential of AI
           </motion.span>
+          <BorderBeam/>
           <RetroGrid />
         </div>
     </div>

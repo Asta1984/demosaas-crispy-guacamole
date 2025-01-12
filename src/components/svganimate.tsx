@@ -5,6 +5,7 @@ export default function AnimateSvg() {
   const [showGif, setShowGif] = useState(false); // State to control GIF display
 
   return (
+    <>
     <div className="h-screen flex items-center justify-center relative">
       {!showGif && (
         <motion.img
@@ -36,5 +37,7 @@ export default function AnimateSvg() {
         />
       )}
     </div>
+    </>
+    
   );
 }
