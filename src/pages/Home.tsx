@@ -1,5 +1,7 @@
 import InfiniteGrid from "@/components/Grid";
+import Spacetimefabric from "@/components/SquareBackground";
 import AnimateSvg from '@/components/svganimate';
+import Mazerunner from "@/components/Warp";
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -29,6 +31,8 @@ export default function Hero() {
         </section>
       </div>
       <InfiniteGrid />
+      <Spacetimefabric />
+      <Mazerunner />
     </>
   );
 }
