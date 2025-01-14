@@ -14,7 +14,7 @@ export default function InfiniteGrid() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text text-center text-3xl md:text-5xl font-Enterpriser leading-none tracking-tighter text-transparent"
           >
-            Exceptional solutions that matter.
+            Unlease the potential of your product.
           </motion.span>
           <RetroGrid />
         </div>

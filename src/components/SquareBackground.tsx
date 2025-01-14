@@ -10,16 +10,16 @@ import {motion} from "framer-motion";
 
 export default function Spacetimefabric() {
   return (
-    <>
+    <div>
     <div className=" flex md:items-center justify-center ">
       <img 
         src= 'animatedmaci.gif' 
         alt="Remote GIF"
-        className="h-28 w-28 md:h-56 md:w-56 mb-10"
+        className="h-32 w-32 md:h-56 md:w-56 p-6"
       />
     </div>
-    <div className="relative mb-20 md:mb-40 rounded-3xl">
-      <div className="relative h-screen">
+    <div className="relative mb-20 p-16 ">
+      <div className="relative md:h-screen rounded-3xl">
         <Squares 
           direction="diagonal"
           speed={0.01}
@@ -41,20 +41,19 @@ export default function Spacetimefabric() {
             <CardDescription className='text-emerald-500 font-Type_writer text-xs md:text-sm '>
             You want job to be done, we get it done. 
             </CardDescription>
-
           </CardContent>
           </Card>
           </motion.div>
-        </div>        
-      </div>
-      <BorderTrail
+        </div>    
+        <BorderTrail
         style={{
           boxShadow:
             "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
         }}
         size={100}
-      />
+      />    
+      </div>
     </div>
-    </>
+    </div>
   )
 }
