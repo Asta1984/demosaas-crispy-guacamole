@@ -15,9 +15,7 @@ export default function Hero() {
           <p className="text-xl sm:text-2xl text-wrap max-w-md font-OnlinePrivileges mb-5 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-cyan-400">
             Build and Launch Your MVP in Record Time. 
           </p>
-          <p className='text-xs text-wrap max-w-md font-Type_writer mb-5'>
-            From web applications to embedded systems, we provide end-to-end development solutions to transform your ideas into production-ready products.
-          </p>
+     
           <div className="-z-50 md:absolute md:inset-y-0 md:right-0 md:w-1/2 mb-5 overflow-hidden">
             <AnimateSvg />
           </div>
