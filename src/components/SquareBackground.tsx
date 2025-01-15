@@ -31,7 +31,7 @@ export default function Spacetimefabric() {
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.9 }} // Trigger when 80% in view, only once
+            viewport={{ once: true, amount: 0.4 }} // Trigger when 80% in view, only once
             transition={{ duration: 1, ease: "easeOut" }}
             exit={{ opacity: 0 }}
           >
