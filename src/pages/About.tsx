@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Users, Target, Rocket } from 'lucide-react';
+import {Footer} from '@/components/ui/footer-section';
 
 export default function About() {
   return (
@@ -83,6 +84,7 @@ export default function About() {
           </p>
         </motion.div>
       </div>
+      <Footer />
     </motion.div>
   );
 }

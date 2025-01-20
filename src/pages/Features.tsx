@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Cpu, Layout, Terminal, Database, Cloud } from 'lucide-react';
+import { Footer } from '@/components/ui/footer-section';
 
 const container = {
   hidden: { opacity: 0 },
@@ -77,6 +78,7 @@ export default function Features() {
           />
         </motion.div>
       </div>
+      <Footer/>
     </motion.div>
   );
 }

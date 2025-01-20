@@ -2,7 +2,6 @@ import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import AppRoutes from './routes/routes';
 import { AnimatePresence } from 'framer-motion';
-
 function App() {
   return (
       <BrowserRouter>
@@ -10,9 +9,11 @@ function App() {
           <div className="App">
             <Navbar />
             <AppRoutes />
-            </div>
+            </div>            
         </AnimatePresence>
-      </BrowserRouter>  
+      
+      </BrowserRouter> 
+       
     );
   }
   

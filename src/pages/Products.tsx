@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Shield, Zap, Globe } from 'lucide-react';
+import { Footer } from '@/components/ui/footer-section';
 
 export default function Product() {
   return (
@@ -120,6 +121,7 @@ await project.deploy({
           />
         </motion.div>
       </div>
+      <Footer/>
     </motion.div>
   );
 }

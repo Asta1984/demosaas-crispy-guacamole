@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Footer } from '@/components/ui/footer-section';
 
 type FAQ = {
   question: string;
@@ -56,6 +57,7 @@ export default function FAQ() {
           ))}
         </div>
       </div>
+      <Footer/>
     </motion.div>
   );
 }
