@@ -1,5 +1,3 @@
-import { Squares } from "../components/ui/squares-background";
-import { BorderTrail } from "@/components/ui/border-trail";
 import {
   Card,
   CardContent,
@@ -18,15 +16,9 @@ export default function Spacetimefabric() {
         className="h-32 w-32 md:h-56 md:w-56 p-6"
       />
     </div>
-    <div className="relative mb-20 p-16 ">
-      <div className="relative md:h-screen rounded-3xl">
-        <Squares 
-          direction="diagonal"
-          speed={0.01}
-          squareSize={20}
-          borderColor="#333" 
-          hoverFillColor="#777"
-        />
+    <div className="relative -mb-40 md:mb-8 p-16 ">
+      <div className="relative h-screen rounded-3xl">
+
         <div className="absolute inset-0 flex justify-center">
           <motion.div
             initial={{ y: -50, opacity: 0 }}
@@ -44,14 +36,7 @@ export default function Spacetimefabric() {
           </CardContent>
           </Card>
           </motion.div>
-        </div>    
-        <BorderTrail
-        style={{
-          boxShadow:
-            "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
-        }}
-        size={100}
-      />    
+        </div>      
       </div>
     </div>
     </div>
