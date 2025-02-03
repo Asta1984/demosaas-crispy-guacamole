@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/sheet";
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeToggle } from './ui/theme-toggle';
 
 
 export default function Navbar() {
@@ -131,9 +132,16 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="hidden md:block ">
-          <Button variant={"outline"}>Get Started</Button>
+        <div className="hidden md:block">
+
+          <div className="flex space-x-6">
+          <div>
+            <ThemeToggle />
+          </div>
+            <Button variant={"outline"}>Get Started</Button>
+          </div>
         </div>
+  
   
 
         {/* Mobile Menu Toggle */}
@@ -150,8 +158,8 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent 
-              side="right" 
-              className="w-full max-w-[300px] sm:max-w-[400px] bg-background/80 overflow-x-hidden"
+              side="left" 
+              className="w-full max-w-[600px] sm:max-w-[400px] bg-background/80 overflow-x-hidden"
             >
               <AnimatePresence>
                 {isOpen && (
@@ -178,6 +186,9 @@ export default function Navbar() {
                     ))}
                     <div className="mt-4 w-full">
                       <Button variant={"outline"}>Get Started</Button>
+                      <div className='mt-20'>
+                        <ThemeToggle/>
+                      </div>
                     </div>
         
 
