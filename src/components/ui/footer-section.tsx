@@ -75,7 +75,7 @@ function Footer() {
             </address>
           </div>
           <div className="relative">
-            <h3 className="mb-4 text-lg flex justify-center font-OnlinePrivileges">Follow Us</h3>
+            <h3 className="mb-12 text-lg flex justify-center font-OnlinePrivileges">Follow Us</h3>
             <div className="mb-6 flex justify-center space-x-4">
               <TooltipProvider>
                 <Tooltip>
