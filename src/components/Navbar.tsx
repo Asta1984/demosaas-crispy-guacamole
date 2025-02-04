@@ -186,9 +186,6 @@ export default function Navbar() {
                     ))}
                     <div className="mt-4 w-full">
                       <Button variant={"outline"}>Get Started</Button>
-                      <div className='mt-20'>
-                        <ThemeToggle/>
-                      </div>
                     </div>
                   </motion.nav>
                 )}

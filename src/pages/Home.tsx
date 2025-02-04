@@ -7,9 +7,7 @@ import { Footer } from "@/components/ui/footer-section";
 export default function Hero() {
   return (
     <>
-      <div className="overflow-auto">
-        <Landing/>
-      </div>
+      <Landing/>
       <InfiniteGrid />
       <Spacetimefabric />
       <Mazerunner />

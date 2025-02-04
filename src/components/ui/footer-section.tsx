@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
+import { ThemeToggle } from "./theme-toggle";
 
 import {
   FaTwitter,
@@ -21,7 +22,7 @@ function Footer() {
   return (
     <>
      <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
+      <div className="mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
             <h2 className="mb-4 text-3xl font-OnlinePrivileges tracking-tight">Stay Connected</h2>
@@ -134,6 +135,10 @@ function Footer() {
                 </Tooltip>
               </TooltipProvider>
             </div>
+            <div className="flex justify-center">
+              <ThemeToggle />
+            </div>
+            
             
           </div>
         </div>
