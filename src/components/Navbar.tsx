@@ -190,8 +190,6 @@ export default function Navbar() {
                         <ThemeToggle/>
                       </div>
                     </div>
-        
-
                   </motion.nav>
                 )}
               </AnimatePresence>
