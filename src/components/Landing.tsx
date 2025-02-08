@@ -24,7 +24,7 @@ export default function Landing() {
                 Explore
             </Link>
             </div>
-            <div>
+            <div className=" md:mb-96">
             <MacbookScroll />
             </div>
         </section>

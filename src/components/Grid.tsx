@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 export default function InfiniteGrid() {
   return (
-    <div className="container flex flex-col items-center justify-center -mt-32 md:mt-1">
-        <div className="relative flex h-[500px] flex-col justify-center overflow-hidden rounded-2xl border md:shadow-white ">
+    <div className="flex flex-col items-center justify-center ">
+        <div className="relative flex h-[500px] flex-col justify-center overflow-hidden rounded-2xl border md:shadow-primary ">
           <motion.span
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
