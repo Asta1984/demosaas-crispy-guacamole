@@ -37,7 +37,7 @@ export default function FAQ() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-black pt-24"
+      className="min-h-screen pt-24"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -79,7 +79,7 @@ function FAQItem({ faq, index }: FAQItemProps) {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left p-4 bg-white/5 rounded-lg border border-white/10 hover:border-blue-500/50 transition flex items-center justify-between"
+        className="w-full text-left p-4 bg-primary/5 rounded-lg border border-white/10 hover:border-blue-500/50 transition flex items-center justify-between"
       >
         <span className="font-semibold">{faq.question}</span>
         <motion.div

@@ -8,7 +8,7 @@ export default function Product() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-black pt-24"
+      className="min-h-screen pt-24"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -35,15 +35,15 @@ export default function Product() {
             <ul className="space-y-4">
               <li className="flex items-center space-x-3">
                 <Shield className="w-5 h-5 text-blue-500" />
-                <span className="text-gray-300">Enterprise-grade security</span>
+                <span className="text-gray-400">Enterprise-grade security</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Zap className="w-5 h-5 text-purple-500" />
-                <span className="text-gray-300">Lightning-fast deployment</span>
+                <span className="text-gray-400">Lightning-fast deployment</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Globe className="w-5 h-5 text-green-500" />
-                <span className="text-gray-300">Global infrastructure</span>
+                <span className="text-gray-400">Global infrastructure</span>
               </li>
             </ul>
           </motion.div>
@@ -52,9 +52,9 @@ export default function Product() {
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="bg-white/5 border border-white/10 rounded-xl p-6"
+            className="bg-primary/5 border border-white/10 rounded-xl p-6"
           >
-            <pre className="text-sm text-gray-300 font-mono">
+            <pre className="text-sm text-gray-500 font-mono">
               <code>{`// Example workflow
 import { TechForge } from '@techforge/sdk';
 
