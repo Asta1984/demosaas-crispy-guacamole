@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AnimateSvg from "../components/svganimate";
+import { MacbookScroll } from "./ui/macbook-scroll";
 
 export default function Landing() {
     return(
@@ -22,6 +23,9 @@ export default function Landing() {
                 className="text text-center sm:text-lg font-bold px-6 sm:px-8 py-3 border border-purple-500 rounded-full hover:bg-accent transition-colors transform hover:scale-105 duration-200 ease-in-out">
                 Explore
             </Link>
+            </div>
+            <div>
+            <MacbookScroll />
             </div>
         </section>
     )    
