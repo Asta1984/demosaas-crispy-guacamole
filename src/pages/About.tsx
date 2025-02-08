@@ -8,7 +8,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-black pt-24"
+      className="min-h-screen pt-24"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -73,7 +73,7 @@ export default function About() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="max-w-3xl mx-auto bg-white/5 rounded-xl p-8 border border-white/10"
+          className="max-w-3xl mx-auto bg-primary/5 rounded-xl p-8 border border-white/10"
         >
           <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
           <p className="text-gray-400 mb-6">

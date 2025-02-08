@@ -93,7 +93,7 @@ function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <motion.div
       variants={item}
-      className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/50 transition"
+      className="p-6 rounded-xl bg-primary/5 border border-white/10 hover:border-blue-500/50 transition"
     >
       <div className="mb-4">{icon}</div>
       <h3 className="text-lg font-semibold mb-2">{title}</h3>

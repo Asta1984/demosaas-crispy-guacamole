@@ -95,7 +95,7 @@ export default function Navbar() {
       initial="initial"
       animate="animate"
       exit="exit"
-      className={`fixed w-full bg-black/80 backdrop-blur-sm z-50 transition-[border-color] duration-200 ${
+      className={`fixed w-full bg-background/60 backdrop-blur-sm z-50 transition-[border-color] duration-200 ${
         hasScrolled ? 'border-b border-white/10' : 'border-b border-transparent'
       }`}
     >
@@ -107,11 +107,11 @@ export default function Navbar() {
           aria-label="Home"
         >
           <img 
-            src="https://pub-d02e3aa7d09f4d5d9261e5d7e4bae228.r2.dev/logo.svg" 
+            src="https://pub-d02e3aa7d09f4d5d9261e5d7e4bae228.r2.dev/colorkit.svg" 
             alt="Logo" 
             className='h-8 w-8 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300'
           />
-          <span className="font-OnlinePrivileges text-foreground group-hover:text-cyan-500 transition-colors duration-300">
+          <span className="font-OnlinePrivileges text-foreground transition-colors duration-300">
             SEWANTIKA</span>
         </Link>
 
