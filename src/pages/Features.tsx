@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Code2, Cpu, Layout, Terminal, Database, Cloud } from 'lucide-react';
 import { Footer } from '@/components/ui/footer-section';
+import { MacbookPro } from '@/components/ui/macbook-pro';
 
 const container = {
   hidden: { opacity: 0 },
@@ -78,6 +79,8 @@ export default function Features() {
           />
         </motion.div>
       </div>
+      <MacbookPro src="https://utfs.io/f/6e654499-f7f4-4d5f-8a96-57255f6775e7-12vlav.jpg"
+        className="size-full"/>
       <Footer/>
     </motion.div>
   );

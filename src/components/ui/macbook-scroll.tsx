@@ -51,7 +51,7 @@ export const MacbookScroll = ({
 
   const scaleX = useTransform(scrollYProgress, [0, 0.3], [1.2, isMobile ? 1 : 1.5])
   const scaleY = useTransform(scrollYProgress, [0, 0.3], [0.6, isMobile ? 1 : 1.5])
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1000])
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 800])
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0])
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100])
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
@@ -66,11 +66,11 @@ export const MacbookScroll = ({
           translateY: textTransform,
           opacity: textOpacity,
         }}
-        className="dark:text-foreground text-neutral-800 text-3xl font-bold mb-20 text-center"
+        className="text-2xl sm:text-4xl text-center font-OnlinePrivileges mb-14 bg-clip-text text-transparent bg-primary"
       >
         {title || (
           <span>
-            This Macbook is built with Tailwindcss. <br /> No kidding.
+            Launching your ideas has never been easier
           </span>
         )}
       </motion.h2>
@@ -151,8 +151,7 @@ export const Lid = ({
         }}
         className=" h-80 w-[32rem] absolute inset-0 rounded-2xl"
       >
-        <div className="absolute inset-0 bg-transparent bg-zinc-700 opacity-85 rounded-lg " />
-   
+        {/*<div className="absolute inset-0 bg-transparent bg-zinc-700 opacity-85 rounded-lg " />*/}
       </motion.div>
       
     </div>

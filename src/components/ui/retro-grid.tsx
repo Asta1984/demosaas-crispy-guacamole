@@ -2,7 +2,7 @@ import { cn } from "../lib/utils";
 
 export function RetroGrid({
   className,
-  angle = 75,
+  angle = 155,
 }: {
   className?: string;
   angle?: number;
@@ -23,10 +23,10 @@ export function RetroGrid({
             "[background-repeat:repeat] [background-size:60px_60px] [height:300vh] [inset:0%_0px] [margin-left:-50%] [transform-origin:100%_0_0] [width:600vw]",
             
             // Light mode - using white with higher opacity
-            "[background-image:linear-gradient(to_right,rgba(255,255,255,0.7)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.7)_1px,transparent_0)]",
+            "[background-image:linear-gradient(to_right,rgba(0,0,0,0.7)_1px,transparent_0),linear-gradient(to_bottom,rgba(0,0,0,0.7)_1px,transparent_0)]",
             
             // Dark mode - using an even brighter white
-            "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.8)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.8)_1px,transparent_0)]"
+            "dark:[background-image:linear-gradient(to_right,rgba(155,255,255,0.8)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.8)_1px,transparent_0)]"
           )}
         />
       </div>
