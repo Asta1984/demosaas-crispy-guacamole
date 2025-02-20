@@ -18,11 +18,11 @@ body {
   animation: gradientMove 15s ease infinite;
 }
 
-/*:root:not(.dark) body {
-  background: radial-gradient(circle at center, hsl(187, 93%, 72%), hsl(66, 88%, 77%), hsl(0, 18%, 97%));
+:root:not(.dark) body {
+  background: radial-gradient(circle at center, hsl(66, 100%, 74%),hsl(0, 0%, 100%), hsl(0, 0%, 100%),hsl(180, 93%, 89%));  
   background-size: 150% 300%;
-  /*animation: gradientMove 15s ease infinite;
-}*/
+  /*animation: gradientMove 15s ease infinite;*/
+}
 
 @keyframes gradientMove {
   0% {
